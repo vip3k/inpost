@@ -26,8 +26,8 @@ public class ParcelLockerSteps {
                 .response();
     }
 
-    @Then("I save the parcel lockers data to parcellockers.{string}.json")
-    public void iSaveTheParcelLockersDataToParcellockersCityJson(String city) throws IOException {
+    @Then("I save the parcel lockers data to parcellockers.{}.json")
+    public void iSaveTheParcelLockersDataToParcellockersJson(String city) throws IOException {
         {
             List<Map<String, Object>> lockers = response.jsonPath().getList("data");
 
@@ -46,4 +46,5 @@ public class ParcelLockerSteps {
 
         }
     }
+
 }

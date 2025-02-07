@@ -33,7 +33,6 @@ public class WebDriverManager {
                 default -> throw new IllegalArgumentException("Unsupported browser: " + browser);
             }
 
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
             driver.manage().window().maximize();
         }
         return driver;
